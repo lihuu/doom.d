@@ -2,6 +2,8 @@
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+;; 放置私有的配置信息
+;;
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -37,6 +39,7 @@
 
 ;;(setq org-bullets-bullet-list '( "⦿" "○" "✸" "✿" "◆"))
 
+;;设置Org mode的标题的图标
 (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
