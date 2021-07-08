@@ -39,6 +39,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;;(setq org-bullets-bullet-list '( "⦿" "○" "✸" "✿" "◆"))
+
+(setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
