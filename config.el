@@ -5,6 +5,7 @@
 ;; 放置私有的配置信息
 ;;
 
+(defconst *is-a-mac* (eq system-type 'darwin))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -21,7 +22,10 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Consolas NF" :size 25 ))
+(if *is-a-mac*
+    (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
+
+    (setq doom-font (font-spec :family "Consolas NF" :size 25 )))
        ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
