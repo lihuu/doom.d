@@ -7,6 +7,8 @@
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 
+(defconst *is-a-linux* (eq system-type 'linux))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "John Doe"
@@ -25,18 +27,62 @@
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
 
-    (setq doom-font (font-spec :family "Consolas NF" :size 25 )))
+    (setq doom-font (font-spec :family "Consolas NF" :size 30 )))
        ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; ;; =>
+;; ("doom-Iosvkem"
+;;  "doom-acario-dark"
+;;  "doom-acario-light"
+;;  "doom-challenger-deep"
+;;  "doom-city-lights"
+;;  "doom-dark+"
+;;  "doom-dracula"
+;;  "doom-ephemeral"
+;;  "doom-fairy-floss"
+;;  "doom-gruvbox"
+;;  "doom-horizon"
+;;  "doom-laserwave"
+;;  "doom-manegarm"
+;;  "doom-material"
+;;  "doom-molokai"
+;;  "doom-monokai-classic"
+;;  "doom-monokai-pro"
+;;  "doom-monokai-spectrum"
+;;  "doom-moonlight"
+;;  "doom-nord-light"
+;;  "doom-nord"
+;;  "doom-nova"
+;;  "doom-oceanic-next"
+;;  "doom-one-light"
+;;  "doom-one"
+;;  "doom-opera-light"
+;;  "doom-opera"
+;;  "doom-outrun-electric"
+;;  "doom-palenight"
+;;  "doom-peacock"
+;;  "doom-rouge"
+;;  "doom-snazzy"
+;;  "doom-solarized-dark"
+;;  "doom-solarized-light"
+;;  "doom-sourcerer"
+;;  "doom-spacegrey"
+;;  "doom-tomorrow-day"
+;;  "doom-tomorrow-night"
+;;  "doom-vibrant"
+;;  "doom-wilmersdorf")
+;;(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-monokai-pro)
 
+;; 设置Org的目录
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/OneDrive/org/")
 
+;; 设置行号
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
