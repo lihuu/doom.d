@@ -33,6 +33,47 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+;; ;; =>
+;; ("doom-Iosvkem"
+;;  "doom-acario-dark"
+;;  "doom-acario-light"
+;;  "doom-challenger-deep"
+;;  "doom-city-lights"
+;;  "doom-dark+"
+;;  "doom-dracula"
+;;  "doom-ephemeral"
+;;  "doom-fairy-floss"
+;;  "doom-gruvbox"
+;;  "doom-horizon"
+;;  "doom-laserwave"
+;;  "doom-manegarm"
+;;  "doom-material"
+;;  "doom-molokai"
+;;  "doom-monokai-classic"
+;;  "doom-monokai-pro"
+;;  "doom-monokai-spectrum"
+;;  "doom-moonlight"
+;;  "doom-nord-light"
+;;  "doom-nord"
+;;  "doom-nova"
+;;  "doom-oceanic-next"
+;;  "doom-one-light"
+;;  "doom-one"
+;;  "doom-opera-light"
+;;  "doom-opera"
+;;  "doom-outrun-electric"
+;;  "doom-palenight"
+;;  "doom-peacock"
+;;  "doom-rouge"
+;;  "doom-snazzy"
+;;  "doom-solarized-dark"
+;;  "doom-solarized-light"
+;;  "doom-sourcerer"
+;;  "doom-spacegrey"
+;;  "doom-tomorrow-day"
+;;  "doom-tomorrow-night"
+;;  "doom-vibrant"
+;;  "doom-wilmersdorf")
 ;;(setq doom-theme 'doom-one)
 (setq doom-theme 'doom-monokai-pro)
 
