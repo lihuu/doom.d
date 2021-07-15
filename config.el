@@ -27,7 +27,7 @@
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
 
-    (setq doom-font (font-spec :family "Consolas NF" :size 30 )))
+    (setq doom-font (font-spec :family "Consolas NF" :size 25 )))
        ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
