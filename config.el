@@ -75,7 +75,8 @@
 ;;  "doom-vibrant"
 ;;  "doom-wilmersdorf")
 ;;(setq doom-theme 'doom-one)
-(setq doom-theme 'doom-monokai-pro)
+;;(setq doom-theme 'doom-monokai-pro)
+(setq doom-theme 'doom-Iosvkem)
 
 ;; 设置Org的目录
 ;; If you use `org' and don't want your org files in the default location below,
