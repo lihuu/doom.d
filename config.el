@@ -27,7 +27,7 @@
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
 
-    (setq doom-font (font-spec :family "Consolas NF" :size 30 )))
+    (setq doom-font (font-spec :family "Consolas NF" :size 25 )))
        ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -75,7 +75,8 @@
 ;;  "doom-vibrant"
 ;;  "doom-wilmersdorf")
 ;;(setq doom-theme 'doom-one)
-(setq doom-theme 'doom-monokai-pro)
+;;(setq doom-theme 'doom-monokai-pro)
+(setq doom-theme 'doom-Iosvkem)
 
 ;; 设置Org的目录
 ;; If you use `org' and don't want your org files in the default location below,
