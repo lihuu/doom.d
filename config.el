@@ -7,7 +7,7 @@
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 
-(defconst *is-a-linux* (eq system-type 'linux))
+(defconst *is-a-linux* (eq system-type 'gnu/linux))
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -24,12 +24,23 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
+;; 有不同的设备，只能根据系统不同设置字体大小
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
-
-    (setq doom-font (font-spec :family "Consolas NF" :size 25 )))
+  (if *is-a-linux*
+      (setq doom-font (font-spec :family "Consolas NF" :size 40 ))
+  (setq doom-font (font-spec :family "Consolas NF" :size 25 ))))
+;;
+;;(setq doom-font (font-spec :family "Consolas NF" :size 40 ))
+       ;;
+       ;;
+       ;;
+       ;;
        ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
+;;(cond (*is-a-mac* (setq doom-font (font-spec :family "Consolas NF" :size 20 )))
+;;      (*is-a-linux* (setq doom-font (font-spec :family "Consolas NF" :size 20 )))
+;; )
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
