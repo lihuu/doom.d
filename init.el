@@ -14,6 +14,24 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
+(defun lihuu_insert_title ()
+  "Insert title in org_mode"
+  (interactive)
+  (insert "#+TITLE:")
+  )
+
+(defun lihuu_insert_author ()
+  "Insert author in org_mode"
+  (interactive)
+  (insert "#+AUTHOR: lihu")
+  )
+
+(defun lihuu_insert_date ()
+  "Insert date in org_mode"
+  (interactive)
+  (insert "#+DATE: ")
+  )
+
 (doom! :input
        ;;chinese
        ;;japanese
@@ -38,7 +56,7 @@
        ;;minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
-       ;;neotree           ; a project drawer, like NERDTree for vim
+       neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
        ;;tabs              ; a tab bar for Emacs
@@ -72,7 +90,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       ;;eshell            ; the elisp shell that works everywhere
+       eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
        ;;vterm             ; the best terminal emulation in Emacs
@@ -86,13 +104,13 @@
        ;;ansible
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
-       ;;docker
+       docker
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
-       ;;lsp               ; M-x vscode
+       lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds

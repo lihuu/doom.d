@@ -102,7 +102,7 @@
 ;;(setq org-bullets-bullet-list '( "⦿" "○" "✸" "✿" "◆"))
 
 ;;设置Org mode的标题的图标
-(setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
+(setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿" "◆"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
