@@ -14,23 +14,24 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
-(defun lihuu_insert_title ()
-  "Insert title in org_mode"
-  (interactive)
-  (insert "#+TITLE:")
-  )
+;; (defun lihuu_insert_title ()
+;;   "Insert title in org_mode"
+;;   (interactive)
+;;   (insert "#+TITLE:")
+;;   )
 
-(defun lihuu_insert_author ()
-  "Insert author in org_mode"
-  (interactive)
-  (insert "#+AUTHOR: lihu")
-  )
+;; (defun lihuu_insert_author ()
+;;   "Insert author in org_mode"
+;;   (interactive)
+;;   (insert "#+AUTHOR: lihu")
+;;   )
 
-(defun lihuu_insert_date ()
-  "Insert date in org_mode"
-  (interactive)
-  (insert "#+DATE: ")
-  )
+;; (defun lihuu_insert_date ()
+;;   "Insert date in org_mode"
+;;   (interactive)
+;;   (insert "#+DATE: ")
+;;   )
+
 
 (doom! :input
        ;;chinese
@@ -208,3 +209,31 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+(defun lihuu-insert-current_date ()
+  "Insert current date"
+  (interactive)
+  (insert (format-time-string "<%Y-%m-%d %A>" (current-time)))
+  )
+
+(defun lihuu-insert-org-header ()
+  "Insert my header"
+  (interactive)
+  (insert "#+TITLE:")
+  (insert "\n")
+  (insert "#+AUTHOR: lihu")
+  (insert "\n")
+  (insert (concat "#+DATE:" ()))
+  (insert (format-time-string "<%Y-%m-%d %A>" (current-time)))
+  (vertical-motion -3)
+  (forward-char 8)
+  (evil-insert 1)
+  )
+
+(defun lihuu-insert-function-defun ()
+  "Insert function"
+  (interactive)
+  (insert "(defun f ()\n")
+  (insert "  \"My function\"\n")
+  (insert "  )")
+  )
