@@ -25,12 +25,30 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;; 有不同的设备，只能根据系统不同设置字体大小
+;;
+;;
+
+
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
   (if *is-a-linux*
       (setq doom-font (font-spec :family "Consolas NF" :size 40 ))
-  (setq doom-font (font-spec :family "Consolas NF" :size 25 ))))
+    ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
+    (setq doom-font (font-spec :family "Consolas NF" :size 26 )
+        ;;doom-unicode-font (font-spec :family "simhei" :size 25)
+          )))
 ;;
+
+;; (when IS-WINDOWS
+;;   (when (display-graphic-p)
+;;     (defun set-font (english chinese english-size chinese-size)
+;;       (set-face-attribute 'default nil :font
+;;                           (format   "%s:pixelsize=%d"  english english-size))
+;;       (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;         (set-fontset-font (frame-parameter nil 'font) charset
+;;                           (font-spec :family chinese :size chinese-size))))
+;;     (set-font "Consolas NF" "SIMHEI" 12 14)
+;;     ))
 ;;(setq doom-font (font-spec :family "Consolas NF" :size 40 ))
        ;;
        ;;
@@ -121,4 +139,5 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;;设置默认的目录
 (setq default-directory "~/")

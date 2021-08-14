@@ -238,13 +238,13 @@
   (insert "  )")
   )
 
-(defun efs/org-mode-setup ()
+(defun lihuu/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
   (visual-line-mode 1))
 
 
-(defun efs/org-font-setup ()
+(defun lihuu/org-font-setup ()
   ;; Replace list hyphen with dot
   (font-lock-add-keywords 'org-mode
                           '(("^ *\\([-]\\) "
@@ -270,17 +270,34 @@
   (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
   (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
 
+(lambda () (progn
+             (setq left-margin-width 2)
+             (setq right-margin-width 2)
+             (set-window-buffer nul (current-buffer))
+             ))
+
+
 (use-package org
-  :hook (org-mode . efs/org-mode-setup)
+  :hook (org-mode . lihuu/org-mode-setup)
   :config
-  (setq org-ellipsis " ▾")
-  (efs/org-font-setup))
+  (lihuu/org-font-setup))
 
 
-;;(defun efs/org-mode-visual-fill ()
+;;Display
+(defun lihuu/display-start-time ()
+  (message "Emacs loaded in %s witn %d times garbage collections"
+           (format "%.2f seconds"
+                   (float-time
+                    (time-subtract after-init-time before-init-time)))
+           gcs-done))
+
+;;(add-hook 'emacs-startup-hook #'lihuu/display-start-time)
+
+
+;;(defun lihuu/org-mode-visual-fill ()
 ;;  (setq visual-fill-column-width 100
 ;;        visual-fill-column-center-text t)
 ;;  (visual-fill-column-mode 1))
 
 ;;(use-package visual-fill-column
-  ;;:hook (org-mode . efs/org-mode-visual-fill))
+  ;;:hook (org-mode . lihuu/org-mode-visual-fill))
