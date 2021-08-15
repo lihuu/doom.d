@@ -117,6 +117,11 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(dolist (mode '(org-mode-hook
+                eshell-mode-hook
+                ))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 ;;(setq org-bullets-bullet-list '( "⦿" "○" "✸" "✿" "◆"))
 
 ;;设置Org mode的标题的图标

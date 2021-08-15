@@ -266,23 +266,23 @@
     (set-face-attribute (car face) nil :font "Consolas NF" :weight 'regular :height (cdr face)))
 
   ;; Ensure that anything that should be fixed-pitch in Org files appears that way
-  (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
-  (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
-  (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
-  (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
-  (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch))
+  ;;(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+  ;;(set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
+  ;;(set-face-attribute 'org-table nil   :inherit '(shadow fixed-pitch))
+  ;;(set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+  ;;(set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+  ;;(set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+  ;;(set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
+  )
 
-;; (lambda () (progn
-;;              (setq left-margin-width 2)
-;;              (setq right-margin-width 2)
-;;              (set-window-buffer nul (current-buffer))
-;;              ))
+ ;;(lambda () (progn
+  ;;            (setq left-margin-width 2)
+   ;;           (setq right-margin-width 2)
+    ;;          (set-window-buffer nul (current-buffer))
+     ;;         ))
 
 
-;; (use-package org
-;;   :hook (org-mode . lihuu/org-mode-setup)
+;;(use-package org :hook (org-mode . lihuu/org-mode-setup)
 ;;   :config
 ;;   (lihuu/org-font-setup))
 
@@ -298,10 +298,10 @@
 ;;(add-hook 'emacs-startup-hook #'lihuu/display-start-time)
 
 
-;;(defun lihuu/org-mode-visual-fill ()
-;;  (setq visual-fill-column-width 100
-;;        visual-fill-column-center-text t)
-;;  (visual-fill-column-mode 1))
+(defun lihuu/org-mode-visual-fill ()
+  (setq visual-fill-column-width 100
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1))
 
-;;(use-package visual-fill-column
-  ;;:hook (org-mode . lihuu/org-mode-visual-fill))
+(use-package visual-fill-column
+  :hook (org-mode . lihuu/org-mode-visual-fill))
