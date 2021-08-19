@@ -50,3 +50,6 @@
 ;(unpin! t)
 
 (package! visual-fill-column)
+;;(package! pasteex)
+(package! pasteex-mode
+  :recipe (:host github :repo "lihuu/pasteex-mode"))
