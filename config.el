@@ -165,3 +165,6 @@
 ;; (global-set-key (kbd "M-o M-v") 'org-docs-insert-image-from-clipboard)
 ;;
 (setq pasteex-executable-path (concat (getenv "HOME") "\\software\\PasteEx\\PasteEx.exe"))
+
+(setq system-time-locale "C")
+(format-time-string "%Y-%m-%d %a")
