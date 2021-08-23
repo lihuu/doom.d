@@ -34,9 +34,13 @@
   (if *is-a-linux*
       (setq doom-font (font-spec :family "Consolas NF" :size 40 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
-    (setq doom-font (font-spec :family "Consolas NF" :size 26 )
+    (setq doom-font (font-spec :family "Sarasa Mono SC Nerd" :size 26 )
+          doom-variable-pitch-font (font-spec :family "Sarasa Mono SC Nerd")
+          doom-unicode-font (font-spec :family "simhei" )
+          doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 30)
         ;;doom-unicode-font (font-spec :family "simhei" :size 25)
           )))
+;;(setup-default-fontset "Noto Sans Mono" 26)
 ;;
 
 ;; (when IS-WINDOWS
