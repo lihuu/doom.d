@@ -53,3 +53,5 @@
 ;;(package! pasteex)
 (package! pasteex-mode
   :recipe (:host github :repo "lihuu/pasteex-mode"))
+
+(package! valign :recipe (:host github :repo "casouri/valign"))
