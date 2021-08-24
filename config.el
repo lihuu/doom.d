@@ -11,8 +11,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "lihuu"
+      user-mail-address "1449488533qq@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -29,11 +29,13 @@
 ;;
 
 
+;;这里面的字体 https://github.com/ryanoasis/nerd-fonts
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
   (if *is-a-linux*
       (setq doom-font (font-spec :family "Consolas NF" :size 40 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
+    ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
     (setq doom-font (font-spec :family "Consolas NF" :size 26 )
           ;;doom-variable-pitch-font (font-spec :family "Sarasa Mono SC Nerd")
           ;;doom-unicode-font (font-spec :family "Microsoft Yahei" )
@@ -167,8 +169,14 @@
 ;;           ))
 ;; ;; set keybinding
 ;; (global-set-key (kbd "M-o M-v") 'org-docs-insert-image-from-clipboard)
-;;
+;; 保存剪贴板中的图片到文件中，只有再Windows 平台下才有效。
 (setq pasteex-executable-path (concat (getenv "HOME") "\\software\\PasteEx\\PasteEx.exe"))
 
 (setq system-time-locale "C")
 (format-time-string "%Y-%m-%d %a")
+;;
+;; 启动的时候全屏
+;;(setq initial-frame-alist (quote ((fullscreen . fullscreen))))
+;;maximized
+;;启动的时候，最大化
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
