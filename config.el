@@ -180,3 +180,5 @@
 ;;maximized
 ;;启动的时候，最大化
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+(add-hook 'org-mode-hook #'valign-mode)
