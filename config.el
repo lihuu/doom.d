@@ -40,7 +40,7 @@
           ;;doom-variable-pitch-font (font-spec :family "Sarasa Mono SC Nerd")
           ;;doom-unicode-font (font-spec :family "Microsoft Yahei" )
           ;;doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 30)
-        ;;doom-unicode-font (font-spec :family "simhei" :size 25)
+          ;;doom-unicode-font (font-spec :family "simhei" :size 25)
           )))
 ;;(setup-default-fontset "Noto Sans Mono" 26)
 ;;
@@ -56,11 +56,11 @@
 ;;     (set-font "Consolas NF" "SIMHEI" 12 14)
 ;;     ))
 ;;(setq doom-font (font-spec :family "Consolas NF" :size 40 ))
-       ;;
-       ;;
-       ;;
-       ;;
-       ;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;;
+;;
+;;
+;;
+;;doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
 ;;(cond (*is-a-mac* (setq doom-font (font-spec :family "Consolas NF" :size 20 )))
 ;;      (*is-a-linux* (setq doom-font (font-spec :family "Consolas NF" :size 20 )))
@@ -131,6 +131,7 @@
 ;;(setq org-bullets-bullet-list '( "⦿" "○" "✸" "✿" "◆"))
 
 ;;设置Org mode的标题的图标
+;;https://github.com/integral-dw/org-superstar-mode
 (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿" "◆"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -182,3 +183,104 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 (add-hook 'org-mode-hook #'valign-mode)
+
+(defun set-font()
+  (interactive)
+  ;; Setting English Font
+  (when (member "DejaVu Sans Mono" (font-family-list))
+    (set-face-attribute 'default nil :font
+                        (format "%s:pixelsize=%d" "DejaVu Sans Mono" 14))
+    )
+
+  ;; Setting Chinese font
+
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Microsoft Yahei" :size 16))
+    )
+  ;; Fix chinese font width and rescale
+  (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2)))
+  )
+
+
+(defun dotemacs-font-existsp (font)
+  (if (null (x-list-fonts font))
+      nil
+    t))
+
+;; or
+
+;; (defun dotemacs-font-existsp (font)
+
+;;   "Detect if a font exists"
+
+;;   (if (find-font (font-spec :family font))
+
+;;         t
+
+;;       nil))
+
+
+(defun dotemacs-make-font-string (font-name font-size)
+  (if (and (stringp font-size)
+           (equal ":" (string (elt font-size 0))))
+      (format "%s%s" font-name font-size)
+    (format "%s %s" font-name font-size)))
+
+(defun dotemacs-set-font (english-fonts
+                       english-font-size
+                       chinese-fonts
+                       &optional chinese-font-size)
+
+  "english-font-size could be set to \":pixelsize=18\" or a integer.
+   If set/leave chinese-font-size to nil, it will follow english-font-size"
+  (require 'cl) ; for find if
+
+  (let ((en-font (dotemacs-make-font-string
+                  (find-if #'dotemacs-font-existsp english-fonts)
+                  english-font-size))
+        (zh-font (font-spec :family (find-if #'dotemacs-font-existsp chinese-fonts)
+                            :size chinese-font-size)))
+
+    ;; Set English font
+
+    ;; (message "Set English Font to %s" en-font)
+
+    (set-face-attribute 'default nil :font en-font)
+
+    ;; Set Chinese font
+
+    ;; (message "Set Chinese Font to %s" zh-font)
+
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font)
+                        charset zh-font)))
+
+    ;; Fix chinese font width and rescale
+
+    (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2))))
+
+(defun set-font()
+  (interactive)
+  (dotemacs-set-font
+    '("DejaVu Sans Mono" "Monaco" "Source Code Pro" "Consolas") ":pixelsize=14"
+    '("Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体") 16)
+  )
+
+
+(defun set-font()
+  (interactive)
+  (setq fonts
+        (cond ((eq system-type 'darwin)     '("Monaco"           "STHeiti"))
+              ((eq system-type 'gnu/linux)  '("Menlo"            "WenQuanYi Zen Hei"))
+              ((eq system-type 'windows-nt) '("DejaVu Sans Mono" "Microsoft Yahei"))))
+  (set-face-attribute 'default nil :font
+                      (format "%s:pixelsize=%d" (car fonts) 14))
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family (car (cdr fonts)) :size 16)))
+  ;; Fix chinese font width and rescale
+
+  (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2)))
+  )
