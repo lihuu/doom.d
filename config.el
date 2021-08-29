@@ -4,6 +4,9 @@
 ;; sync' after modifying this file!
 ;; 放置私有的配置信息
 ;;
+;;(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+;;                         ("org-cn". "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;                        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (defconst *is-a-mac* (eq system-type 'darwin))
 
