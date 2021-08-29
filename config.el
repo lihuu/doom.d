@@ -287,3 +287,20 @@
 
   (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2)))
   )
+
+
+;;
+;; 输入法配置
+;;
+;;使用pyim默认的词库
+;;添加词库的参考 https://github.com/tumashu/pyim
+(require 'pyim)
+(setq default-input-method "pyim")
+(global-set-key (kbd "C-\\") 'toggle-input-method)
+
+(global-set-key (kbd "M-j") 'pyim-convert-string-at-point)
+(if (posframe-workable-p)
+    (setq pyim-page-tooltip 'posframe)
+                (setq pyim-page-tooltip 'popup))
+(setq pyim-page-length 5)
+(pyim-basedict-enable)
