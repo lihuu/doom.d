@@ -57,3 +57,6 @@
 (package! valign :recipe (:host github :repo "casouri/valign"))
 (package! pyim-basedict)
 ;;(package! posframe)
+
+
+(disable-packages! org-fancy-priorities)
