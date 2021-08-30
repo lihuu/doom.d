@@ -36,7 +36,7 @@
 (if *is-a-mac*
     (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
   (if *is-a-linux*
-      (setq doom-font (font-spec :family "Consolas NF" :size 40 ))
+      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
     ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
     (setq doom-font (font-spec :family "Consolas NF" :size 26 )
