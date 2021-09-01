@@ -221,15 +221,15 @@
   )
 
 (defun lihuu-insert-org-header ()
-  "Insert my header"
+  "Insert my header in org files"
   (interactive)
-  (insert "#+title:")
-  (insert "\n")
-  (insert "#+author: lihu")
-  (insert "\n")
-  (insert (concat "#+date:" ()))
-  (insert (format-time-string "<%Y-%m-%d %A>" (current-time)))
-  (vertical-motion -3)
+  (insert "#+title:\n")
+  (insert "#+author: lihu\n")
+  (insert (concat "#+date: " (format-time-string "<%Y-%m-%d %A>" (current-time)) "\n"))
+  ;;(insert (format-time-string "<%Y-%m-%d %A>" (current-time)))
+  ;;(insert "\n")
+  (insert "#+options: toc:nil")
+  (vertical-motion -4)
   (forward-char 8)
   (evil-insert 1)
   )
