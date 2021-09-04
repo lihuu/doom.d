@@ -226,13 +226,15 @@
   (insert "#+title:\n")
   (insert "#+author: lihu\n")
   (insert (concat "#+date: " (format-time-string "<%Y-%m-%d %A>" (current-time)) "\n"))
-  ;;(insert (format-time-string "<%Y-%m-%d %A>" (current-time)))
-  ;;(insert "\n")
+  (insert "#+html_head: <link rel=\"stylesheet\" type=\"text/css\" href=\"style/index.css\"/>")
   (insert "#+options: toc:nil")
-  (vertical-motion -4)
+  (insert "#+options: html-postamble:nil:nil")
+  (insert "#+options: num:nil")
+  (vertical-motion -7)
   (forward-char 8)
   (evil-insert 1)
   )
+
 
 (defun lihuu-insert-function-defun ()
   "Insert function"
