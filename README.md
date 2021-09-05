@@ -11,8 +11,11 @@ https://github.com/huiyadanli/PasteEx/releases
 查看这个文件 https://github.com/iqbalansari/emacs-emojify/blob/master/data/emoji-sets.json  里面的内容，手动下载对应文件，然后解压到
 `.emacs.d\.local\etc\emojis` 这个目录里面就可以了。
 
-## windwos平台安装ripgrep
+## windows平台安装ripgrep
 `scoop install ripgrep`
-
+## windows 平台安装 pandoc
+`scoop install pandoc`
+## windows 平台安装 graphviz
+`scoop install graphviz`
 
 
