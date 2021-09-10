@@ -51,12 +51,12 @@
 
 (package! visual-fill-column)
 ;;(package! pasteex)
-(package! pasteex-mode
-  :recipe (:host github :repo "lihuu/pasteex-mode"))
+(package! pasteex-mode :recipe (:host github :repo "lihuu/pasteex-mode"))
 
 (package! valign :recipe (:host github :repo "casouri/valign"))
 (package! pyim-basedict)
 ;;(package! posframe)
 
+(package! org-onenote :recipe (:host github :repo "lihuu/org-onenote"))
 
 (disable-packages! org-fancy-priorities)
