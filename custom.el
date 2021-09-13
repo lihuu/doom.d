@@ -21,6 +21,12 @@
    '((:name "搜狗词库" :file "~/OneDrive/词库备份/搜狗输入法/sougou-dict.pyim")))
  '(rustic-ansi-faces
    ["#191919" "#FF5E5E" "#468800" "#E9FDAC" "#8CDAFF" "#C586C0" "#85DDFF" "#d4d4d4"])
+ '(sql-connection-alist
+   '(("mysql-localhost"
+      (sql-product 'mysql)
+      (sql-user "root")
+      (sql-database "bagevent")
+      (sql-server "localhost"))))
  '(vc-annotate-background "#191919")
  '(vc-annotate-color-map
    (list

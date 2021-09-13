@@ -304,3 +304,5 @@
                 (setq pyim-page-tooltip 'popup))
 (setq pyim-page-length 5)
 (pyim-basedict-enable)
+
+(add-to-list 'exec-path (concat (getenv "MYSQL_HOME") "/bin"))
