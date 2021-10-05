@@ -318,3 +318,5 @@
 	 (buffer-string)))
       (file-name-nondirectory source)))
 (advice-add #'org-html--format-image :override #'org-org-html--format-image)
+
+(setq-default fill-column 100)
