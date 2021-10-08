@@ -306,3 +306,6 @@
 (pyim-basedict-enable)
 
 (add-to-list 'exec-path (concat (getenv "MYSQL_HOME") "/bin"))
+
+(setq org-image-actual-width '(400))
+;;(setq org-image-actual-width t)
