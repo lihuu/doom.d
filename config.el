@@ -309,3 +309,12 @@
 
 (setq org-image-actual-width '(400))
 ;;(setq org-image-actual-width t)
+;;
+
+(if (eq system-type 'windows-nt)
+	(progn
+	  ;; (setq selection-coding-system 'utf-16le-dos) ;; 修复从网页剪切文本过来时显示 \nnn \nnn 的问题
+	  ;; (set-default selection-coding-system 'utf-16le-dos)
+	  (set-selection-coding-system 'utf-16le-dos) ;; 别名set-clipboard-coding-system
+	  )
+  (set-selection-coding-system 'utf-8))
