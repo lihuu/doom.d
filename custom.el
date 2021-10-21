@@ -15,7 +15,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#171F24" "#777778"))
  '(objed-cursor-color "#FF5E5E")
  '(org-agenda-files
-   '("~/OneDrive/org/work/marketup网站编辑.org" "~/OneDrive/org/work/表单重构.org" "~/OneDrive/org/todo.org" "~/OneDrive/org/work/自定义列表页和表单关联.org" "~/OneDrive/org/learn/org-mode.org" "~/OneDrive/org/bagevent-web-todo.org" "~/OneDrive/org/marketup-todo.org"))
+   '("~/OneDrive/org/work/lead-track.org" "~/OneDrive/org/work/marketup网站编辑.org" "~/OneDrive/org/work/表单重构.org" "~/OneDrive/org/todo.org" "~/OneDrive/org/work/自定义列表页和表单关联.org" "~/OneDrive/org/learn/org-mode.org" "~/OneDrive/org/bagevent-web-todo.org" "~/OneDrive/org/marketup-todo.org"))
  '(pdf-view-midnight-colors (cons "#d4d4d4" "#191919"))
  '(pyim-dicts
    '((:name "搜狗词库" :file "~/OneDrive/词库备份/搜狗输入法/sougou-dict.pyim")))
