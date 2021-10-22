@@ -174,7 +174,8 @@
 ;; ;; set keybinding
 ;; (global-set-key (kbd "M-o M-v") 'org-docs-insert-image-from-clipboard)
 ;; 保存剪贴板中的图片到文件中，只有再Windows 平台下才有效。
-(setq pasteex-executable-path (concat (getenv "HOME") "\\software\\PasteEx\\PasteEx.exe"))
+;;(setq pasteex-executable-path (concat (getenv "HOME") "\\software\\PasteEx\\PasteEx.exe"))
+(setq pasteex-executable-path (concat (getenv "HOME") "\\scoop\\shims\\pasteex.exe"))
 
 (setq system-time-locale "C")
 (format-time-string "%Y-%m-%d %a")
