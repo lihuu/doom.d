@@ -34,7 +34,7 @@
 
 ;;这里面的字体 https://github.com/ryanoasis/nerd-fonts
 (if *is-a-mac*
-    (setq doom-font (font-spec :family "Consolas NF" :size 20 ))
+    (setq doom-font (font-spec :family "Consolas NF" :size 28 ))
   (if *is-a-linux*
       (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
