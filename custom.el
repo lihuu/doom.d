@@ -15,7 +15,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#171F24" "#777778"))
  '(objed-cursor-color "#FF5E5E")
  '(org-agenda-files
-   '("~/OneDrive/org/work/lead-track.org" "~/OneDrive/org/work/marketup网站编辑.org" "~/OneDrive/org/work/表单重构.org" "~/OneDrive/org/todo.org" "~/OneDrive/org/work/自定义列表页和表单关联.org" "~/OneDrive/org/learn/org-mode.org" "~/OneDrive/org/bagevent-web-todo.org" "~/OneDrive/org/marketup-todo.org"))
+   '("~/OneDrive/org/work/marketup-optiomize.org" "~/OneDrive/org/work/lead-track.org" "~/OneDrive/org/work/marketup网站编辑.org" "~/OneDrive/org/work/表单重构.org" "~/OneDrive/org/todo.org" "~/OneDrive/org/work/自定义列表页和表单关联.org" "~/OneDrive/org/learn/org-mode.org" "~/OneDrive/org/bagevent-web-todo.org" "~/OneDrive/org/marketup-todo.org"))
  '(pdf-view-midnight-colors (cons "#d4d4d4" "#191919"))
  '(pyim-dicts '((:name "搜狗词库" :file "~/OneDrive/dict/sougou-dict.pyim")))
  '(rustic-ansi-faces
@@ -49,7 +49,7 @@
     (cons 360 "#515151")))
  '(vc-annotate-very-old-color nil)
  '(warning-suppress-log-types '((emacs)))
- '(warning-suppress-types '((emacs))))
+ '(warning-suppress-types '((org-element-cache) (emacs))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
