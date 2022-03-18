@@ -59,4 +59,8 @@
 
 (package! org-onenote :recipe (:host github :repo "lihuu/org-onenote"))
 
+;;/ahungry/org-jira
+
+(package! org-jira :recipe (:host github :repo "ahungry/org-jira"))
+
 (disable-packages! org-fancy-priorities)
