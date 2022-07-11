@@ -192,3 +192,35 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+
+(defun lihuu-insert-current-date()
+  "Inert curretn date"
+  (interactive)
+  (insert (format-time-string "<%Y-%m-%d %A>"(current-time)))
+  )
+
+
+(defun lihuu-insert-org-header ()
+  "Insert my header in org files"
+  (interactive)
+  (insert "#+title:\n")
+  (insert "#+author: lihu\n")
+  (insert (concat "#+date: " (format-time-string "<%Y-%m-%d %A>" (current-time)) "\n"))
+  (insert "#+html_head: <link rel=\"stylesheet\" type=\"text/css\" href=\"style/index.css\"/>\n")
+  (insert "#+options: toc:nil\n")
+  (insert "#+options: html-postamble:nil:nil\n")
+  (insert "#+options: num:nil\n")
+  (vertical-motion -7)
+  (forward-char 8)
+  (evil-insert 1)
+  )
+
+
+(defun lihuu-insert-function-defun ()
+  "Insert function"
+  (interactive)
+  (insert "(defun f ()\n")
+  (insert "  \"My function\"\n")
+  (insert "  )")
+  )
