@@ -224,3 +224,21 @@
   (insert "  \"My function\"\n")
   (insert "  )")
   )
+
+(defun lihuu/org-mode-setup()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1)
+  )
+
+(defun lihuu/org-mode-visual-fill()
+  (setq visual-fill-column-width 100
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1)
+  )
+
+(use-package visual-fill-column
+  :hook (org-mode . lihuu/org-mode-visual-fill)
+  )
+
+(setq-default fill-column 100)
