@@ -237,8 +237,4 @@
   (visual-fill-column-mode 1)
   )
 
-(use-package visual-fill-column
-  :hook (org-mode . lihuu/org-mode-visual-fill)
-  )
-
 (setq-default fill-column 100)
