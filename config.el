@@ -43,7 +43,12 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/OneDrive/org/")
+
+;;maximized when start up
+
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
