@@ -49,6 +49,8 @@
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
+(setq markdown-command "/opt/homebrew/bin/pandoc")
+
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -82,3 +84,4 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
