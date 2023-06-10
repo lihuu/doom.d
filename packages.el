@@ -54,13 +54,14 @@
 (package! pasteex-mode :recipe (:host github :repo "lihuu/pasteex-mode"))
 
 (package! valign :recipe (:host github :repo "casouri/valign"))
+(package! pyim)
 (package! pyim-basedict)
 ;;(package! posframe)
 
-(package! org-onenote :recipe (:host github :repo "lihuu/org-onenote"))
+;;(package! org-onenote :recipe (:host github :repo "lihuu/org-onenote"))
 
 ;;/ahungry/org-jira
 
-(package! org-jira :recipe (:host github :repo "ahungry/org-jira"))
+;;(package! org-jira :recipe (:host github :repo "ahungry/org-jira"))
 
-(disable-packages! org-fancy-priorities)
+;;(disable-packages! org-fancy-priorities)

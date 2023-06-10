@@ -12,6 +12,7 @@
 
 (defconst *is-a-linux* (eq system-type 'gnu/linux))
 
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "lihuu"
@@ -175,7 +176,7 @@
 ;; (global-set-key (kbd "M-o M-v") 'org-docs-insert-image-from-clipboard)
 ;; 保存剪贴板中的图片到文件中，只有再Windows 平台下才有效。
 ;;(setq pasteex-executable-path (concat (getenv "HOME") "\\software\\PasteEx\\PasteEx.exe"))
-(setq pasteex-executable-path (concat (getenv "HOME") "\\scoop\\shims\\pasteex.exe"))
+(setq pasteex-executable-path (concat (getenv "HOME") "\\.doom.d\\pasteex\\PasteEx.exe"))
 
 (setq system-time-locale "C")
 (format-time-string "%Y-%m-%d %a")
@@ -296,6 +297,7 @@
 ;;使用pyim默认的词库
 ;;添加词库的参考 https://github.com/tumashu/pyim
 (require 'pyim)
+(require 'pyim-cregexp-utils)
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 
@@ -319,3 +321,8 @@
 	  (set-selection-coding-system 'utf-16le-dos) ;; 别名set-clipboard-coding-system
 	  )
   (set-selection-coding-system 'utf-8))
+
+
+
+;;(use-package! visual-fill-column
+;;  :hook (org-mode . lihuu/org-mode-visual-fill))

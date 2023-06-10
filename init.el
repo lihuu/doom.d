@@ -306,9 +306,6 @@
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
-(use-package visual-fill-column
-  :hook (org-mode . lihuu/org-mode-visual-fill))
-
 (defun org-org-html--format-image (source attributes info)
   (format "<img src=\"data:image/%s;base64,%s\"%s />"
       (or (file-name-extension source) "")
