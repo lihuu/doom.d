@@ -40,6 +40,11 @@
 ;;    (setq doom-font (font-spec :family "Consolas NF" :size 28 ))
 ;;  (if *is-a-linux*
 ;;      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+;; 这个里面的字体会有的显示不完全
+(if *is-a-mac*
+    (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+  (if *is-a-linux*
+      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
     ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
 
