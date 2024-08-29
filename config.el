@@ -1,4 +1,4 @@
-;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
@@ -39,11 +39,11 @@
 ;;  (if *is-a-linux*
 ;;      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
 ;; 这个里面的字体会有的显示不完全
-(if *is-a-mac*
+;;(if *is-a-mac*
     ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 ))
-    (setq doom-font (font-spec :family "FiraMono Nerd Font" :size 26 ))
-  (if *is-a-linux*
-      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+;;    (setq doom-font (font-spec :family "FiraMono Nerd Font" :size 26 ))
+;;  (if *is-a-linux*
+;;      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
     ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
 
@@ -271,29 +271,31 @@
 
     (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2))))
 
-(defun set-font()
-  (interactive)
-  (dotemacs-set-font
-    '("DejaVu Sans Mono" "Monaco" "Source Code Pro" "Consolas") ":pixelsize=14"
-    '("Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体") 16)
-  )
+;;(defun set-font()
+;;  (interactive)
+;;  (dotemacs-set-font
+ ;;   '("DejaVu Sans Mono" "Monaco" "Source Code Pro" "Consolas") ":pixelsize=14"
+ ;;   '("Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体") 16)
+ ;; )
 
 
-(defun set-font()
-  (interactive)
-  (setq fonts
-        (cond ((eq system-type 'darwin)     '("Monaco"           "STHeiti"))
-              ((eq system-type 'gnu/linux)  '("Menlo"            "WenQuanYi Zen Hei"))
-              ((eq system-type 'windows-nt) '("DejaVu Sans Mono" "Microsoft Yahei"))))
-  (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" (car fonts) 14))
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family (car (cdr fonts)) :size 16)))
+;;(defun set-font()
+  ;;(interactive)
+  ;;(setq fonts
+       ;; (cond ((eq system-type 'darwin)     '("Monaco"           "STHeiti"))
+              ;;:((eq system-type 'gnu/linux)  '("Menlo"            "WenQuanYi Zen Hei"))
+              ;;((eq system-type 'windows-nt) '("DejaVu Sans Mono" "Microsoft Yahei"))))
+ ;; (set-face-attribute 'default nil :font
+ ;                     (format "%s:pixelsize=%d" (car fonts) 14))
+ ;
+ ;
+ ;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+ ;;   (set-fontset-font (frame-parameter nil 'font) charset
+ ;;                     (font-spec :family (car (cdr fonts)) :size 16)))
   ;; Fix chinese font width and rescale
 
-  (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2)))
-  )
+;;  (setq face-font-rescale-alist '(("STHeiti" . 1.2) ("STFangsong" . 1.2) ("Microsoft Yahei" . 1.2) ("WenQuanYi Micro Hei Mono" . 1.2)))
+;;  )
 
 
 ;;
@@ -326,8 +328,6 @@
 	  (set-selection-coding-system 'utf-16le-dos) ;; 别名set-clipboard-coding-system
 	  )
   (set-selection-coding-system 'utf-8))
-
-
 
 ;;(use-package! visual-fill-column
 ;;  :hook (org-mode . lihuu/org-mode-visual-fill))
