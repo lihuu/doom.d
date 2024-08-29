@@ -14,18 +14,15 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
-<<<<<<< HEAD
 (defun lihuu_insert_title ()
    "Insert title in org_mode"
    (interactive)
    (insert "#+TITLE:")
 )
-=======
 ;; (defun lihuu_insert_title ()
 ;;   "Insert title in org_mode" (interactive)
 ;;   (insert "#+TITLE:")
 ;;   )
->>>>>>> de4a539 (feat: basic config for macos)
 
 (defun lihuu_insert_author ()
    "Insert author in org_mode"
