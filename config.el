@@ -1,5 +1,5 @@
 ;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
+;; 这个文件编辑之后，需要运行 doom sync
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 ;; 放置私有的配置信息
@@ -15,8 +15,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "lihuu"
-      user-mail-address "1449488533qq@gmail.com")
+(setq user-full-name "lihuu" user-mail-address "1449488533qq@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -30,8 +29,12 @@
 ;; font string. You generally only need these two:
 ;; 有不同的设备，只能根据系统不同设置字体大小
 
-
-(setq doom-font (font-spec :family "JetBrainsMono NF" :size 28))
+(if *is-a-mac*
+    (setq doom-font (font-spec :family "JetBrainsMono NF" :size 20))
+  (if *is-a-linux*
+        (setq doom-font (font-spec :family "JetBrainsMono NF" :size 28))
+        (setq doom-font (font-spec :family "JetBrainsMono NF" :size 28))
+   ))
 
 ;;这里面的字体 https://github.com/ryanoasis/nerd-fonts
 ;;(if *is-a-mac*
