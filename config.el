@@ -29,8 +29,6 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 ;; 有不同的设备，只能根据系统不同设置字体大小
-;;
-;;
 
 
 (setq doom-font (font-spec :family "JetBrainsMono NF" :size 28))
@@ -42,7 +40,8 @@
 ;;      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
 ;; 这个里面的字体会有的显示不完全
 (if *is-a-mac*
-    (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+    ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+    (setq doom-font (font-spec :family "FiraMono Nerd Font" :size 26 ))
   (if *is-a-linux*
       (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
