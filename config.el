@@ -33,22 +33,23 @@
 ;;
 
 
+(setq doom-font (font-spec :family "JetBrainsMono NF" :size 28))
+
 ;;这里面的字体 https://github.com/ryanoasis/nerd-fonts
-(if *is-a-mac*
-    (setq doom-font (font-spec :family "Consolas NF" :size 28 ))
-  (if *is-a-linux*
-      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
+;;(if *is-a-mac*
+;;    (setq doom-font (font-spec :family "Consolas NF" :size 28 ))
+;;  (if *is-a-linux*
+;;      (setq doom-font (font-spec :family "Consolas NF" :size 26 ))
     ;;(setq doom-font (font-spec :family "Fira Mono for Powerline" :size 25 )
     ;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
-    (setq doom-font (font-spec :family "Consolas NF" :size 26 )
+
+;;(setq doom-font (font-spec :family "Consolas NF" :size 26 )
           ;;doom-variable-pitch-font (font-spec :family "Sarasa Mono SC Nerd")
           ;;doom-unicode-font (font-spec :family "Microsoft Yahei" )
           ;;doom-big-font (font-spec :family "Sarasa Mono SC Nerd" :size 30)
           ;;doom-unicode-font (font-spec :family "simhei" :size 25)
-          )))
+ ;;         )))
 ;;(setup-default-fontset "Noto Sans Mono" 26)
-;;
-
 ;; (when IS-WINDOWS
 ;;   (when (display-graphic-p)
 ;;     (defun set-font (english chinese english-size chinese-size)
