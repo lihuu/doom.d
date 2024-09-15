@@ -1,16 +1,14 @@
 ;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-;; 这个文件编辑之后，需要运行 doom sync
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
-;; 放置私有的配置信息
 ;;
 ;;(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 ;;                         ("org-cn". "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 ;;                        ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 
 (defconst *is-a-mac* (eq system-type 'darwin))
-
 (defconst *is-a-linux* (eq system-type 'gnu/linux))
+(defconst *is-a-windows* (eq system-type 'windows-nt))
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
@@ -324,13 +322,16 @@
 ;;(setq org-image-actual-width t)
 ;;
 
-(if (eq system-type 'windows-nt)
+(if *is-a-windows*
 	(progn
 	  ;; (setq selection-coding-system 'utf-16le-dos) ;; 修复从网页剪切文本过来时显示 \nnn \nnn 的问题
 	  ;; (set-default selection-coding-system 'utf-16le-dos)
 	  (set-selection-coding-system 'utf-16le-dos) ;; 别名set-clipboard-coding-system
 	  )
   (set-selection-coding-system 'utf-8))
+
+
+(defun hello(name) (interactive "sWhat your name?" ) (message "Hello, %s" name))
 
 ;;(use-package! visual-fill-column
 ;;  :hook (org-mode . lihuu/org-mode-visual-fill))
